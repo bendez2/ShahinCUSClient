@@ -1,0 +1,105 @@
+﻿<Window x:Class="Nastol.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Nastol"
+        mc:Ignorable="d"
+        Title="Menu" Background="White" WindowStartupLocation="CenterScreen" Height="700" HorizontalContentAlignment="Stretch">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="170"></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70" ></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+        </Grid.RowDefinitions>
+            
+        <Label  Grid.Row="0" Grid.ColumnSpan="3"           
+                Background="Black" Foreground="White"  HorizontalAlignment="Stretch" 
+                Padding="10"
+                FontWeight="Bold"
+                FontSize="30"            
+                Content ="Данные пользователя"  />
+        <Viewbox Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <WrapPanel x:Name="MenuItem"  Margin="0,10,0,10" Orientation="Vertical" HorizontalAlignment="Stretch">
+            
+            <Button Click="UsersClick"
+                Background="White" BorderBrush="Black" Margin="0,10,5,0.1" BorderThickness="1"  HorizontalAlignment="Stretch" Content="Пользователи" FontSize="17"/>
+            <Button Click="TaskButtClick"
+                Background="White" BorderBrush="Black" Margin="0,0,5,0" BorderThickness="1" Content="Задания" FontSize="17"/>
+            <Button Background="White" BorderBrush="Black" Margin="0,0,5,0.1" BorderThickness="1"  Content="Пусто" FontSize="17"/>
+        </WrapPanel>
+        </Viewbox>
+            
+        <UniformGrid Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
+            <WrapPanel HorizontalAlignment="Stretch" Margin="10,20,10,0" Orientation="Horizontal">
+                <StackPanel Margin="0,0,10,0">           
+                    <Viewbox Stretch="UniformToFill" Height="5">
+                        <TextBox Visibility="Hidden"/>
+                    </Viewbox>
+                    <Label Margin="10,0,5,0"
+                FontSize="22"
+                Content="Фамилия" />
+  
+                     <TextBox FontSize="20" MaxLength="50"                    
+                         x:Name="TextSurname"
+                         Background="White" 
+                         Padding="5,2,5,2"/>
+                    <Label Margin="10,10,0,0"
+                FontSize="22"
+                Content="Имя"  />
+                    <TextBox FontSize="20" 
+                x:Name="TextName" 
+                Background="White" Padding="5,2,5,2" MaxLength="50" />
+                    <Label Margin="10,10,0,0"
+                FontSize="22"
+                Content="Отчество"  />
+                    <TextBox FontSize="20"
+                x:Name="TextPatronomic" MaxLength="50"
+                Background ="White"  Padding="5,2,5,2"/>
+                    <Label Margin="10,10,0,0"
+                FontSize="22"
+                Content="Дата рождения"  />
+                    <DatePicker x:Name="TextDateofBirth" FontSize="20" 
+                Background="White" Padding="5,2,5,2"/>
+                    <Label Margin="10,10,0,0"
+                FontSize="22"
+                Content="Место обучения"  />
+                    <TextBox
+                x:Name="TextEnterprice" FontSize="20" MaxLength="50" SpellCheck.IsEnabled="True" Language="ru-ru"
+                 Background="White"  Padding="5,2,5,2"  />
+                    <WrapPanel Background="White" HorizontalAlignment="Center" Margin="0,20" VerticalAlignment="Center">
+                        <Button    HorizontalAlignment="Stretch"                            
+                Foreground="White" FontSize="20"
+                Margin="5,10,10,5"
+                x:Name="Update"
+                Padding="20,10,20,10"
+                Background="Black"
+                Content="Обновить"
+                Click="UpdateBut"  />
+                        <Button  HorizontalAlignment="Stretch"
+                Foreground="White"
+                Margin="5,10,10,5"
+                x:Name="SaveButt" FontSize="20"
+                Padding="20,10,20,10"
+                Background ="Black"
+                Click="SaveData"
+                Content="Сохранить"/>
+                    </WrapPanel>
+                </StackPanel>
+
+            </WrapPanel>
+        </UniformGrid>
+       
+        
+        <WrapPanel Grid.Row="2" Grid.Column="0" >
+            <Button Click="CloseWindow" 
+                x:Name="Back" Background="White" Content="Выход" BorderThickness="1" Padding="53,5,52,5" FontSize="18" HorizontalAlignment="Stretch" Margin="0,0,0,5"/>
+        </WrapPanel>   
+        </Grid>
+
+</Window>

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "yEcUwPFsJoJlmXZGzcyX0SzngqzG6Yg8jOxU9hwW3mYtrAAvp4nDBNe3F33NmxVpWh8CWsjfkC7cKc/uNAYYmA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\liliili\\source\\repos\\Nastolka1\\Nastol.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\liliili\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

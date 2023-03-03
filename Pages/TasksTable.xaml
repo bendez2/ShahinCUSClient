@@ -1,0 +1,35 @@
+﻿<Window x:Class="Nastol.TasksTable"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Nastol"
+        mc:Ignorable="d"
+        Title="TasksTable" Height="700" Width="1200" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="170"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label  Grid.Row="0" Grid.ColumnSpan="3"           
+                Background="Black" Foreground="White"   HorizontalAlignment="Stretch"
+                Padding="10"
+                FontWeight="Bold"
+                FontSize="30"            
+                Content ="Таблица пользователей" />
+
+        <WrapPanel Grid.Row="2" Grid.Column ="0" Margin="0,10,0,0">
+            <Button Content="Назад" Click="CloseWindow"  Background="White" BorderThickness="1" Padding="53,5,52,5" FontSize="18" HorizontalAlignment="Stretch" Margin="0,0,0,5" />
+        </WrapPanel>
+
+        <DataGrid x:Name="MGrid" Grid.Row="1" Grid.Column="1" Margin="0,5,10,0">
+
+        </DataGrid>
+    </Grid>
+</Window>

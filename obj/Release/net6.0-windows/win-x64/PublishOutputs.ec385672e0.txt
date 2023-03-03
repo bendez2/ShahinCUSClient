@@ -1,0 +1,6 @@
+D:\Диплом\Nastolka\Nastol.exe
+D:\Диплом\Nastolka\Nastol.dll
+D:\Диплом\Nastolka\Nastol.deps.json
+D:\Диплом\Nastolka\Nastol.runtimeconfig.json
+D:\Диплом\Nastolka\Nastol.pdb
+D:\Диплом\Nastolka\Newtonsoft.Json.dll
